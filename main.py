@@ -188,4 +188,7 @@ ModuloEnvios.crear_pestana(pestana2)
 ModuloFlota.crear_pestana(pestana3)
 ModuloIncidentes.crear_pestana(pestana4)
 
-root.mainloop()
+# Aseguramos que solo se ejecute la app si estamos dentro del main 
+if __name__ == '__main__':
+
+    root.mainloop()
