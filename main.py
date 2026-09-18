@@ -66,23 +66,21 @@ class ModuloEnvios:
 # Creacion de la ventana principal
     @classmethod
     def crear_pestana(cls, principal):
-        frame = tk.LabelFrame(principal, text=" Datos de la Guía de Distribución ", padx=15, pady=15) # --> Tamaño
+        frame = tk.LabelFrame(principal, text=" Datos para generar la Guía de Distribución ", padx=15, pady=15) # --> Tamaño
         frame.pack(pady=20, padx=20, fill="both", expand=True) # La podemos agrandar lo que queramos
 # Fill = both es para estirar en todas las direcciones al mismo tiempo
 
-        tk.Label(frame, text="Número de Guía:").grid(row=0, column=0, sticky="w", pady=5)
+        tk.Label(frame, text="Cliente / Empresa:").grid(row=0, column=0, sticky="w", pady=5)
         tk.Entry(frame, width=20).grid(row=0, column=1, sticky="w", pady=5, padx=5)
 # Por medio de grid creamos los elementos en forma de tabla. row es renglon y column es columna
 # y por medio de sticky = w estamos pegando el texto hacia la izquierda
 # uno es un frame y el otro es la entrada para ungresar texto
-        tk.Label(frame, text="Cliente / RUC:").grid(row=1, column=0, sticky="w", pady=5)
+        tk.Label(frame, text="Direccion Destino:").grid(row=1, column=0, sticky="w", pady=5)
         tk.Entry(frame, width=30).grid(row=1, column=1, sticky="w", pady=5, padx=5)
 
-        tk.Label(frame, text="Dirección Destino:").grid(row=2, column=0, sticky="w", pady=5)
+        tk.Label(frame, text="Peso declarado:").grid(row=2, column=0, sticky="w", pady=5)
         tk.Entry(frame, width=40).grid(row=2, column=1, sticky="w", pady=5, padx=5)
 
-        tk.Label(frame, text="Peso Declarado (Kg):").grid(row=3, column=0, sticky="w", pady=5)
-        tk.Entry(frame, width=15).grid(row=3, column=1, sticky="w", pady=5, padx=5)
 
 # Creacion del boton.
         btn_guardar = tk.Button(
@@ -188,7 +186,7 @@ ModuloEnvios.crear_pestana(pestana2)
 ModuloFlota.crear_pestana(pestana3)
 ModuloIncidentes.crear_pestana(pestana4)
 
-# Aseguramos que solo se ejecute la app si estamos dentro del main 
+# Aseguramos que solo se ejecute la app si estamos dentro del main
 if __name__ == '__main__':
 
     root.mainloop()
